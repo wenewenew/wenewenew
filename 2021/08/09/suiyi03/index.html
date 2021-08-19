@@ -1,259 +1,161 @@
-
-
 <!DOCTYPE html>
-<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
-
-
-
+<html>
 <head>
-  <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
-  <link rel="icon" href="/img/favicon.png">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta charset="utf-8">
   
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <title>有关MC原生类整合包制作的小感 | Wenew&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="">
-  <meta name="author" content="wenew">
-  <meta name="keywords" content="">
+  <meta name="keywords" content="闲谈MC" />
   
-  <title>有关MC原生类整合包制作的小感 - Wenew&#39;s Blog</title>
-
-  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
-
-
-  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
-  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
-
   
+  
+  
+  <meta name="description" content="这并不是一篇技术类文章，而是以我制作原生类整合包过程之中和之后的感想为主  貌似上个月没有更新文章诶，主要是没啥想写的，正经人的生活就是那么的无趣。我当时甚至打算关掉博客，这些文章肯定会成为黑历史，不过后来一想还是留着吧（主要是考虑到没人看），就让这些文章留在这里吧，毕竟此博客建立的初衷就是记录生活，记录改变，这些文章反而正式我所需要的，而需要改变的是我对待博客态度，这个博客更像是一个开放但没人">
+<meta property="og:type" content="article">
+<meta property="og:title" content="有关MC原生类整合包制作的小感">
+<meta property="og:url" content="http://example.com/2021/08/09/suiyi03/index.html">
+<meta property="og:site_name" content="Wenew&#39;s Blog">
+<meta property="og:description" content="这并不是一篇技术类文章，而是以我制作原生类整合包过程之中和之后的感想为主  貌似上个月没有更新文章诶，主要是没啥想写的，正经人的生活就是那么的无趣。我当时甚至打算关掉博客，这些文章肯定会成为黑历史，不过后来一想还是留着吧（主要是考虑到没人看），就让这些文章留在这里吧，毕竟此博客建立的初衷就是记录生活，记录改变，这些文章反而正式我所需要的，而需要改变的是我对待博客态度，这个博客更像是一个开放但没人">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.hualigs.cn/image/6110e35aeae39.jpg">
+<meta property="article:published_time" content="2021-08-09T08:52:00.000Z">
+<meta property="article:modified_time" content="2021-08-09T08:52:00.000Z">
+<meta property="article:author" content="wenew">
+<meta property="article:tag" content="闲谈">
+<meta property="article:tag" content="MC">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.hualigs.cn/image/6110e35aeae39.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="Wenew&#39;s Blog" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
     
-    
-      
-      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
-    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
   
+<link rel="stylesheet" href="/css/style.css">
+
 
   
-    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
-  
+<script src="/js/jquery-3.1.1.min.js"></script>
 
 
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/fashion.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
 
-<!-- 主题依赖的图标库，不要自行修改 -->
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
-
-
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
-
-
-<link  rel="stylesheet" href="/css/main.css" />
-
-<!-- 自定义样式保持在最底部 -->
-
-
-  <script id="fluid-configs">
-    var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":false,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":4},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
-  </script>
-  <script  src="/js/utils.js" ></script>
-  <script  src="/js/color-schema.js" ></script>
 <meta name="generator" content="Hexo 5.4.0"></head>
 
 
-<body>
-  <header style="height: 70vh;">
-    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
-  <div class="container">
-    <a class="navbar-brand"
-       href="/">&nbsp;<strong>WENEW</strong>&nbsp;</a>
 
-    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <div class="animated-icon"><span></span><span></span><span></span></div>
-    </button>
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
 
-    <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto text-center">
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/">
-                <i class="iconfont icon-home-fill"></i>
-                首页
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="iconfont icon-books"></i>
-                文章
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                
-                  
-                  
-                  
-                  <a class="dropdown-item" href="/archives/">
-                    <i class="iconfont icon-archive-fill"></i>
-                    归档
-                  </a>
-                
-                  
-                  
-                  
-                  <a class="dropdown-item" href="/categories/">
-                    <i class="iconfont icon-category-fill"></i>
-                    分类
-                  </a>
-                
-                  
-                  
-                  
-                  <a class="dropdown-item" href="/tags/">
-                    <i class="iconfont icon-tags-fill"></i>
-                    标签
-                  </a>
-                
-              </div>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/links/">
-                <i class="iconfont icon-link-fill"></i>
-                链接
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/about/">
-                <i class="iconfont icon-user-fill"></i>
-                关于
-              </a>
-            </li>
-          
-        
-        
-          <li class="nav-item" id="search-btn">
-            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
-                class="iconfont icon-search"></i>&nbsp;</a>
-          </li>
-        
-        
-          <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" href="javascript:">&nbsp;<i
-                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-</nav>
 
-    <div class="banner" id="banner" parallax=true
-         style="background: url('https://www.hualigs.cn/image/6110e35aeae39.jpg') no-repeat center center;
-           background-size: cover;">
-      <div class="full-bg-img">
-        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.2)">
-          <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="有关MC原生类整合包制作的小感">
-              
-            </span>
+  
 
+
+<header id="allheader" class="site-header" role="banner" 
+   >
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
             
-              <div class="mt-3">
-  
-  
-    <span class="post-meta">
-      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-08-09 16:52" pubdate>
-        2021年8月9日 下午
-      </time>
-    </span>
-  
-</div>
-
-<div class="mt-1">
-  
-    
-    <span class="post-meta mr-2">
-      <i class="iconfont icon-chart"></i>
-      1.5k 字
-    </span>
-  
-
-  
-    
-    <span class="post-meta mr-2">
-      <i class="iconfont icon-clock-fill"></i>
-      
-      
-      5
-       分钟
-    </span>
-  
-
-  
-  
-</div>
-
+              <a href="/" title="Wenew&#39;s Blog" rel="home"> Wenew&#39;s Blog </a>
             
-          </div>
-
+          </h1>
           
-        </div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="menu sf-js-enabled sf-arrows"  style="touch-action: pan-y;">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/"> <a class="" href="/">首页</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="archives"> <a class="" href="/archives">归档</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="categories"> <a class="" href="/categories">分类</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="tags"> <a class="" href="/tags">标签</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="about"> <a class="" href="/about">关于</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
       </div>
-    </div>
-  </header>
+  </div>
+</header>
 
-  <main>
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-suiyi03" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
+<div class="article-gallery">
+  <div class="article-gallery-photos">
+    
+      <a class="article-gallery-img fancybox" target="_blank" href="https://www.hualigs.cn/image/6110e35aeae39.jpg" rel="gallery_cksibter40000nsql9p6mhdvr noopener">
+        <img src="https://www.hualigs.cn/image/6110e35aeae39.jpg" itemprop="image">
+      </a>
+    
+  </div>
+</div>
+
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      有关MC原生类整合包制作的小感
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
       
+	<a href="/2021/08/09/suiyi03/" class="article-date">
+	  <time datetime="2021-08-09T08:52:00.000Z" itemprop="datePublished">八月 9, 2021</time>
+	</a>
 
-<div class="container-fluid nopadding-x">
-  <div class="row nomargin-x">
-    <div class="d-none d-lg-block col-lg-2"></div>
-    <div class="col-lg-8 nopadding-x-md">
-      <div class="container nopadding-x-md" id="board-ctn">
-        <div class="py-5" id="board">
-          <article class="post-content mx-auto">
-            <!-- SEO header -->
-            <h1 style="display: none">有关MC原生类整合包制作的小感</h1>
-            
-              <p class="note note-info">
-                
-                  最后更新于：2021年8月9日 下午
-                
-              </p>
-            
-            <div class="markdown-body">
-              <p class="note note-warning">这并不是一篇技术类文章，而是以我制作原生类整合包过程之中和之后的感想为主</p>
-
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/%E7%BB%8F%E9%AA%8C%E4%B9%8B%E8%B0%88/">经验之谈</a>
+ 
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>这并不是一篇技术类文章，而是以我制作原生类整合包过程之中和之后的感想为主</p>
+</blockquote>
 <p>貌似上个月没有更新文章诶，主要是没啥想写的，<del>正经人</del>的生活就是那么的无趣。我当时甚至打算关掉博客，这些文章肯定会成为黑历史，不过后来一想还是留着吧（主要是考虑到没人看），就让这些文章留在这里吧，毕竟此博客建立的初衷就是记录生活，记录改变，这些文章反而正式我所需要的，而需要改变的是我对待博客态度，这个博客更像是一个开放但没人翻看的日记本，记录我各种想法，五味陈杂，我要做的就是写出有意思的或自己感兴趣的东西上传，而不是每月逼自己写一篇文章。</p>
+<span id="more"></span>
+
 <h3 id="背景说明"><a href="#背景说明" class="headerlink" title="背景说明"></a>背景说明</h3><p>怎么会想到去做一个整合包的呢？</p>
 <ul>
 <li>额，一时还很难回答，可能更多是觉得有趣吧，还有就是我平常喜欢翻看一些模组的介绍，就想着做一个整合包尽可能的包含我想要的模组，然后我最初入坑模组也是从一个不知名的整合包开始的，算是一些情怀吧。</li>
@@ -276,215 +178,182 @@
 <h3 id="制作过程"><a href="#制作过程" class="headerlink" title="制作过程"></a>制作过程</h3><p>制作前有一堆的事情要做，首先要了解整合包制作大概过程，在此阶段我曾翻阅了大量教程，最初我曾打算做一个魔改整合，奈何难度太大并且要付出的时间太多便直入原生整合包，这类整合其实制作非常简单，因此也催生出了一大堆非常低质量的原生整合，不过我的整合包还是很有特色的，也是费了不少心血的。</p>
 <p>就以最早的理想整合为例，我清晰的记得当时一个个精挑细选模组的情形，在选取模组时进行了很多的调整，当时把<a target="_blank" rel="noopener" href="https://www.mcmod.cn/">MC百科</a>里的1.12.2的模组翻了一遍，最后选出了一些我想加进去的。然后，实装模组并测试，这个过程也是问题不断，一些模组会有冲突，甚至和一些优化模组产生奇怪的问题，解决冲突很大概率是通过删除模组实现来实现，而这样又要考虑游戏平衡性，删掉的是什么模组？功能是什么？能不能找到替代的模组，然后还要再测试。之后最痛苦的应该就是实际生存模式下测试了，这过程中会肉眼可见一些奇怪的问题，有些可以修改模组设置来解决，有些则不能。之后就是进行简单但很烦的模组配置文件修改，在这个整合中我进最大可能修改了模组配置，以达到我想要的效果。当时搞这东西疯狂到甚至在宿舍熄灯后我还在查相关资料或是一遍又一遍启动游戏进行测试。</p>
 <p>此外，制作最初就选用了PCL2启动器，可能主要是平时用的比较多吧，个人认为其操作逻辑要比HMCL合理。我甚至学习了如何配置PCL主页，如下面的效果（制作归零整合时还自定义了帮助文件，将其整合到了启动器内）。</p>
-<p><img src="https://www.hualigs.cn/image/6110f9b33a2c1.jpg" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://www.hualigs.cn/image/6110f9b33a2c1.jpg"></p>
 <p>还有就是制作中做了很多小工作，比如一个附加的材质包，一份更新日志，一个模组指南，我不知道有多大的意义，但是当时就是这么做了，就不在细说了。</p>
 <h3 id="制作之后"><a href="#制作之后" class="headerlink" title="制作之后"></a>制作之后</h3><p>在做完了整合包之后我还花费了不少心思调整平衡性，修复BUG，优化游戏体验等一系列操作。关于BUG的修复，实在让我胃疼，虽然不少人下载了，但完全不会给出建设性反馈，帖子收到回复大概是2%的概率（其中大多数还是灌水的），大多数都是白嫖党（就像平时的我一样），基本全靠我自行开生存玩游戏实际体验，所以只会注意到我发现的问题进行修复，挺难受的。</p>
 <p>在之后就是一些总结和思考了，我打算不再这方面花费时间，而做完整合包后很长一段时间都没有打开MC，属实是看到游戏界面就想吐的那种感觉。不过制作整合包的过程中自己还是有学到挺多东西的，那段时间属实为我留下了深刻印象。</p>
 
-            </div>
-            <hr>
-            <div>
-              <div class="post-metas mb-3">
-                
-                  <div class="post-meta mr-3">
-                    <i class="iconfont icon-category"></i>
-                    
-                      <a class="hover-with-bg" href="/categories/%E7%BB%8F%E9%AA%8C%E4%B9%8B%E8%B0%88/">经验之谈</a>
-                    
-                  </div>
-                
-                
-                  <div class="post-meta">
-                    <i class="iconfont icon-tags"></i>
-                    
-                      <a class="hover-with-bg" href="/tags/%E9%97%B2%E8%B0%88/">闲谈</a>
-                    
-                      <a class="hover-with-bg" href="/tags/MC/">MC</a>
-                    
-                  </div>
-                
-              </div>
-              
-              
-                <div class="post-prevnext">
-                  <article class="post-prev col-6">
-                    
-                    
-                  </article>
-                  <article class="post-next col-6">
-                    
-                    
-                      <a href="/2021/06/28/suiyizhitan2/">
-                        <span class="hidden-mobile">也许我们不需要思考明天会怎样</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
-                    
-                  </article>
-                </div>
-              
-            </div>
-
-            
-          </article>
-        </div>
-      </div>
+      
     </div>
-    
-      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
-        <div id="toc">
-  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
-  <div class="toc-body" id="toc-body"></div>
-</div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/%E7%BB%8F%E9%AA%8C%E4%B9%8B%E8%B0%88/">经验之谈</a>
 
-      </div>
-    
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MC/" rel="tag">MC</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%97%B2%E8%B0%88/" rel="tag">闲谈</a></li></ul>
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
   </div>
-</div>
-
-<!-- Custom -->
-
-
+  
     
+<nav id="article-nav">
+  
+  
+    <a href="/2021/06/28/suiyizhitan2/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">也许我们不需要思考明天会怎样</div>
+    </a>
+  
+</nav>
 
-    
-      <a id="scroll-top-button" href="#" role="button">
-        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
-      </a>
-    
+  
+</article>
 
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
     
-      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
-     aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
-        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body mx-3">
-        <div class="md-form mb-5">
-          <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v"
-                 for="local-search-input">关键词</label>
-        </div>
-        <div class="list-group" id="local-search-result"></div>
-      </div>
+      <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%83%8C%E6%99%AF%E8%AF%B4%E6%98%8E"><span class="nav-number">1.</span> <span class="nav-text">背景说明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8B"><span class="nav-number">2.</span> <span class="nav-text">制作过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%B6%E4%BD%9C%E4%B9%8B%E5%90%8E"><span class="nav-number">3.</span> <span class="nav-text">制作之后</span></a></li></ol>
+    
     </div>
+  </aside>
+</section>
+        
+      </div>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2021 Wenew&#39;s Blog All Rights Reserved.
+        
+      </div>
+      <div class="site-credit">
+        have a nice day!</a>
+      </div>
   </div>
-</div>
-    
-
-    
-  </main>
-
-  <footer class="text-center mt-5 py-3">
-  <div class="footer-content">
-     <span></span></a> 
-  </div>
-  
-
-  
-
-  
 </footer>
 
 
-  <!-- SCRIPTS -->
-  
-  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
-  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+<!-- min height -->
 
-  <script>
-    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
-    NProgress.start()
-    window.addEventListener('load', function() {
-      NProgress.done();
-    })
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+
+
+    <!-- headerblur min height -->
+    
+    
+</script>
+    
+<div style="display: none;">
+  <script src="https://s11.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+</div>
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+<script src="/js/bootstrap.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+
+
+
+	<script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?6664626f2816330a34dac57b096845d8";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
   </script>
 
 
-<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
-<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
-<script  src="/js/debouncer.js" ></script>
-<script  src="/js/events.js" ></script>
-<script  src="/js/plugins.js" ></script>
 
-<!-- Plugins -->
+  </div>
 
-
-  
-    <script  src="/js/img-lazyload.js" ></script>
-  
-
-
-
-  
-
-
-
-  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
-
-
-
-  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
-
-
-
-
-
-  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
-
-
-
-
-
-
-  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
-  <script>
-    (function (window, document) {
-      var typing = Fluid.plugins.typing;
-      var title = document.getElementById('subtitle').title;
-      
-      typing(title)
-      
-    })(window, document);
-  </script>
-
-
-
-  <script  src="/js/local-search.js" ></script>
-  <script>
-    (function () {
-      var path = "/local-search.xml";
-      $('#local-search-input').on('click', function() {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      });
-      $('#modalSearch').on('shown.bs.modal', function() {
-        $('#local-search-input').focus();
-      });
-    })()
-  </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- 主题的启动项 保持在最底部 -->
-<script  src="/js/boot.js" ></script>
-
-
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
 </body>
 </html>
