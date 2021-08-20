@@ -1124,24 +1124,28 @@ ul.widget-tab-nav {
 
 /* Widget Social Icons */
 .widget-social-icons li {
-	float: left;
-	margin: 5px 10px 5px 0;
-	text-align: center;
-	}
+ float: left;
+- margin: 5px 10px 5px 0;
++   margin: 5px 5px 5px 5px;
+  text-align: center;
+  }
 .widget-social-icons li a {
-	display: block;
-	}
+  display: block;
+  }
 .widget-social-icons li a [class^="fa"]:before {
-	width: 40px;
-	margin: 0;
-	color: #fff;
-	font-size: 20px;
-	line-height: 40px;
-	background: #333;
-	}
+- width: 40px;
++  width: 50px;
+  margin: 0;
+   color: #fff;
+- font-size: 20px;
+-  line-height: 40px;
++    font-size: 30px;
++  line-height: 50px;
+    background: #333;
+    }
 .widget-social-icons li a:hover [class^="fa"]:before {
-	background: #1fa0ae;
-	}
+   background: #1fa0ae;
+ }
 
 /* Widget Flickr */
 .widget-flickr-stream {
