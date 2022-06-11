@@ -1,158 +1,234 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  
-  <title>有关MC原生类整合包制作的小感 | Wenew&#39;s Blog</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  
-  <meta name="keywords" content="闲谈MC" />
-  
-  
-  
-  
-  <meta name="description" content="这并不是一篇技术类文章，而是以我制作原生类整合包过程之中和之后的感想为主  貌似上个月没有更新文章诶，主要是没啥想写的，正经人的生活就是那么的无趣。我当时甚至打算关掉博客，这些文章肯定会成为黑历史，不过后来一想还是留着吧（主要是考虑到没人看），就让这些文章留在这里吧，毕竟此博客建立的初衷就是记录生活，记录改变，这些文章反而正式我所需要的，而需要改变的是我对待博客态度，这个博客更像是一个开放但没人">
-<meta property="og:type" content="article">
-<meta property="og:title" content="有关MC原生类整合包制作的小感">
-<meta property="og:url" content="https://wenewenew.gitee.io/wenewenew/2021/08/09/suiyi03/index.html">
-<meta property="og:site_name" content="Wenew&#39;s Blog">
-<meta property="og:description" content="这并不是一篇技术类文章，而是以我制作原生类整合包过程之中和之后的感想为主  貌似上个月没有更新文章诶，主要是没啥想写的，正经人的生活就是那么的无趣。我当时甚至打算关掉博客，这些文章肯定会成为黑历史，不过后来一想还是留着吧（主要是考虑到没人看），就让这些文章留在这里吧，毕竟此博客建立的初衷就是记录生活，记录改变，这些文章反而正式我所需要的，而需要改变的是我对待博客态度，这个博客更像是一个开放但没人">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://s3.bmp.ovh/imgs/2021/08/0ac97da653987efa.jpg">
-<meta property="article:published_time" content="2021-08-09T08:52:00.000Z">
-<meta property="article:modified_time" content="2021-08-09T08:52:00.000Z">
-<meta property="article:author" content="wenew">
-<meta property="article:tag" content="闲谈">
-<meta property="article:tag" content="MC">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://s3.bmp.ovh/imgs/2021/08/0ac97da653987efa.jpg">
-  
-    <link rel="alternate" href="/atom.xml" title="Wenew&#39;s Blog" type="application/atom+xml">
-  
-  <link rel="icon" href="/wenewenew/css/images/favicon.ico">
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
-  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
-  <style type="text/css">
-    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
-    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
-    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
-    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="wenew">
     
-  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
-
-  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
-  
+    <title>
+        
+            有关MC原生类整合包制作的小感 |
+        
+        Wenew&#39;s Blog
+    </title>
+    
 <link rel="stylesheet" href="/wenewenew/css/style.css">
 
+    <link rel="shortcut icon" href="/wenewenew/images/favicon.png">
+    
+<link rel="stylesheet" href="/wenewenew/css/font-awesome.min.css">
 
-  
-<script src="/wenewenew/js/jquery-3.1.1.min.js"></script>
-
-
-  <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="/wenewenew/css/bootstrap.css" >
-  <link rel="stylesheet" href="/wenewenew/css/fashion.css" >
-  <link rel="stylesheet" href="/wenewenew/css/glyphs.css" >
-
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"wenewenew.gitee.io","root":"/wenewenew/","language":"zh-CN","path":"search.xml"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":false,"expand_all":true,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"/images/avatar.jpg","favicon":"/images/favicon.png","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving."},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":true}}},"local_search":{"enable":true,"preload":false,"search":{"path":"search.json","field":"post","content":true,"format":"striptags"}},"code_copy":{"enable":true,"style":"default"},"pjax":{"enable":true},"lazyload":{"enable":false}};
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
+  </script>
 <meta name="generator" content="Hexo 5.4.0"></head>
 
 
+<body>
+<div class="progress-bar-container">
+    
 
-  <body data-spy="scroll" data-target="#toc" data-offset="50">
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fas fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
 
 
-  
+<main class="page-container">
 
+    
 
-<header id="allheader" class="site-header" role="banner" 
-   >
-  <div class="clearfix container">
-      <div class="site-branding">
+    <div class="page-main-content">
 
-          <h1 class="site-title">
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
             
-              <a href="/wenewenew/" title="Wenew&#39;s Blog" rel="home"> Wenew&#39;s Blog </a>
-            
-          </h1>
-          
-          
-            
-          <nav id="main-navigation" class="main-navigation" role="navigation">
-            <a class="nav-open">Menu</a>
-            <a class="nav-close">Close</a>
+            <a class="logo-title" href="/">
+                Wenew&#39;s Blog
+            </a>
+        </div>
 
-            <div class="clearfix sf-menu">
-              <ul id="main-nav" class="menu sf-js-enabled sf-arrows"  style="touch-action: pan-y;">
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
                     
-                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/"> <a class="" href="/wenewenew/">首页</a> </li>
+                        <li class="menu-item">
+                            <a class=""
+                               href="/wenewenew/"
+                            >
+                                首页
+                            </a>
+                        </li>
                     
-                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="archives"> <a class="" href="/wenewenew/archives">归档</a> </li>
+                        <li class="menu-item">
+                            <a class=""
+                               href="/wenewenew/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
                     
-                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="categories"> <a class="" href="/wenewenew/categories">分类</a> </li>
+                        <li class="menu-item">
+                            <a class=""
+                               href="/wenewenew/video"
+                            >
+                                影视
+                            </a>
+                        </li>
                     
-                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="tags"> <a class="" href="/wenewenew/tags">标签</a> </li>
+                        <li class="menu-item">
+                            <a class=""
+                               href="/wenewenew/about"
+                            >
+                                关于
+                            </a>
+                        </li>
                     
-                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="video"> <a class="" href="/wenewenew/video">影视</a> </li>
                     
-                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="about"> <a class="" href="/wenewenew/about">关于</a> </li>
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
                     
-              </ul>
+                </ul>
             </div>
-          </nav>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-      </div>
-  </div>
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/wenewenew/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/wenewenew/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/wenewenew/video">影视</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/wenewenew/about">关于</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
 </header>
 
 
-  <div id="container">
-    <div id="wrap">
-            
-      <div id="content" class="outer">
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">有关MC原生类整合包制作的小感</span>
+        </div>
+
         
-          <section id="main" style="float:none;"><article id="post-suiyi03" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/wenewenew/images/avatar.jpg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">wenew</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;
+        <span class="pc">2021-08-09 16:52:00</span>
+        <span class="mobile">2021-08-09 16:52</span>
+    </span>
     
-<div class="article-gallery">
-  <div class="article-gallery-photos">
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/wenewenew/categories/%E7%BB%8F%E9%AA%8C%E4%B9%8B%E8%B0%88/">经验之谈</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
     
-      <a class="article-gallery-img fancybox" target="_blank" href="https://s3.bmp.ovh/imgs/2021/08/0ac97da653987efa.jpg" rel="gallery_cksl6wd7h0006ukqlhjethcwe noopener">
-        <img src="https://s3.bmp.ovh/imgs/2021/08/0ac97da653987efa.jpg" itemprop="image">
-      </a>
     
-  </div>
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/wenewenew/tags/MC/">MC</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/wenewenew/tags/%E9%97%B2%E8%B0%88/">闲谈</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>1.5k 字</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>5 分钟</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
 </div>
 
-    
-      <header class="article-header">
+                    </div>
+                </div>
+            </div>
         
-  
-    <h1 class="thumb" class="article-title" itemprop="name">
-      有关MC原生类整合包制作的小感
-    </h1>
-  
 
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/wenewenew/2021/08/09/suiyi03/" class="article-date">
-	  <time datetime="2021-08-09T08:52:00.000Z" itemprop="datePublished">八月 9, 2021</time>
-	</a>
-
-      
-	<span class="ico-folder"></span>
-    <a class="article-category-link" href="/wenewenew/categories/%E7%BB%8F%E9%AA%8C%E4%B9%8B%E8%B0%88/">经验之谈</a>
- 
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
+        <div class="article-content markdown-body">
+            <blockquote>
 <p>这并不是一篇技术类文章，而是以我制作原生类整合包过程之中和之后的感想为主</p>
 </blockquote>
 <p>貌似上个月没有更新文章诶，主要是没啥想写的，<del>正经人</del>的生活就是那么的无趣。我当时甚至打算关掉博客，这些文章肯定会成为黑历史，不过后来一想还是留着吧（主要是考虑到没人看），就让这些文章留在这里吧，毕竟此博客建立的初衷就是记录生活，记录改变，这些文章反而正式我所需要的，而需要改变的是我对待博客态度，这个博客更像是一个开放但没人翻看的日记本，记录我各种想法，五味陈杂，我要做的就是写出有意思的或自己感兴趣的东西上传，而不是每月逼自己写一篇文章。</p>
@@ -164,13 +240,13 @@
 </ul>
 <p>你的整合包里呢？什么类型的？</p>
 <ul>
-<li><p><a target="_blank" rel="noopener" href="https://www.mediafire.com/folder/5oon6i9i1b8s5/%E6%95%B4%E5%90%88%E5%8C%85">MediaFire</a>（总下载链接，下面均链接至发布贴，有度盘链接和详细介绍）</p>
+<li><p><a class="link"   target="_blank" rel="noopener" href="https://www.mediafire.com/folder/5oon6i9i1b8s5/%E6%95%B4%E5%90%88%E5%8C%85" >MediaFire<i class="fas fa-external-link-alt"></i></a>（总下载链接，下面均链接至发布贴，有度盘链接和详细介绍）</p>
 </li>
-<li><p><a target="_blank" rel="noopener" href="https://www.mcbbs.net/thread-1202263-1-1.html">理想世界整合</a>：基于1.12.2Forge打造（对，就是那个模组最多的1.12.2），是第一个，也是投入最多心思，最符合制作整合包最初目的的一个。可休闲、可冒险、可以被虐。</p>
+<li><p><a class="link"   target="_blank" rel="noopener" href="https://www.mcbbs.net/thread-1202263-1-1.html" >理想世界整合<i class="fas fa-external-link-alt"></i></a>：基于1.12.2Forge打造（对，就是那个模组最多的1.12.2），是第一个，也是投入最多心思，最符合制作整合包最初目的的一个。可休闲、可冒险、可以被虐。</p>
 </li>
-<li><p><a target="_blank" rel="noopener" href="https://www.mcbbs.net/thread-1213565-1-1.html">归零整合</a>：游戏版本1.16.5，更多是基于对Fabric的喜爱而制作，壮哉我大Fabric！比较单纯，难度不大，适合养老，优化很好的整合包。</p>
+<li><p><a class="link"   target="_blank" rel="noopener" href="https://www.mcbbs.net/thread-1213565-1-1.html" >归零整合<i class="fas fa-external-link-alt"></i></a>：游戏版本1.16.5，更多是基于对Fabric的喜爱而制作，壮哉我大Fabric！比较单纯，难度不大，适合养老，优化很好的整合包。</p>
 </li>
-<li><p><a target="_blank" rel="noopener" href="https://www.mcbbs.net/thread-1226422-1-1.html">归零整合Plus</a>：尝试向归零整合中加入更多的冒险元素以增强游戏难度和可玩性，但是在这方面Fabric属实让人失望，帖子还被回收了，在第一个版本后便不了了之，下载惨淡，说出来都是泪。</p>
+<li><p><a class="link"   target="_blank" rel="noopener" href="https://www.mcbbs.net/thread-1226422-1-1.html" >归零整合Plus<i class="fas fa-external-link-alt"></i></a>：尝试向归零整合中加入更多的冒险元素以增强游戏难度和可玩性，但是在这方面Fabric属实让人失望，帖子还被回收了，在第一个版本后便不了了之，下载惨淡，说出来都是泪。</p>
 </li>
 </ul>
 <p>之后呢？还会去尝试更有挑战性的内容吗？</p>
@@ -178,190 +254,294 @@
 <li>不会，现有整合包也已全部停止更新，不过有问题的话还是会尽力帮大家解决。主要是个人能力还差得远，而且这东西前几个月里占用我太多时间了。</li>
 </ul>
 <h3 id="制作过程"><a href="#制作过程" class="headerlink" title="制作过程"></a>制作过程</h3><p>制作前有一堆的事情要做，首先要了解整合包制作大概过程，在此阶段我曾翻阅了大量教程，最初我曾打算做一个魔改整合，奈何难度太大并且要付出的时间太多便直入原生整合包，这类整合其实制作非常简单，因此也催生出了一大堆非常低质量的原生整合，不过我的整合包还是很有特色的，也是费了不少心血的。</p>
-<p>就以最早的理想整合为例，我清晰的记得当时一个个精挑细选模组的情形，在选取模组时进行了很多的调整，当时把<a target="_blank" rel="noopener" href="https://www.mcmod.cn/">MC百科</a>里的1.12.2的模组翻了一遍，最后选出了一些我想加进去的。然后，实装模组并测试，这个过程也是问题不断，一些模组会有冲突，甚至和一些优化模组产生奇怪的问题，解决冲突很大概率是通过删除模组实现来实现，而这样又要考虑游戏平衡性，删掉的是什么模组？功能是什么？能不能找到替代的模组，然后还要再测试。之后最痛苦的应该就是实际生存模式下测试了，这过程中会肉眼可见一些奇怪的问题，有些可以修改模组设置来解决，有些则不能。之后就是进行简单但很烦的模组配置文件修改，在这个整合中我进最大可能修改了模组配置，以达到我想要的效果。当时搞这东西疯狂到甚至在宿舍熄灯后我还在查相关资料或是一遍又一遍启动游戏进行测试。</p>
+<p>就以最早的理想整合为例，我清晰的记得当时一个个精挑细选模组的情形，在选取模组时进行了很多的调整，当时把<a class="link"   target="_blank" rel="noopener" href="https://www.mcmod.cn/" >MC百科<i class="fas fa-external-link-alt"></i></a>里的1.12.2的模组翻了一遍，最后选出了一些我想加进去的。然后，实装模组并测试，这个过程也是问题不断，一些模组会有冲突，甚至和一些优化模组产生奇怪的问题，解决冲突很大概率是通过删除模组实现来实现，而这样又要考虑游戏平衡性，删掉的是什么模组？功能是什么？能不能找到替代的模组，然后还要再测试。之后最痛苦的应该就是实际生存模式下测试了，这过程中会肉眼可见一些奇怪的问题，有些可以修改模组设置来解决，有些则不能。之后就是进行简单但很烦的模组配置文件修改，在这个整合中我进最大可能修改了模组配置，以达到我想要的效果。当时搞这东西疯狂到甚至在宿舍熄灯后我还在查相关资料或是一遍又一遍启动游戏进行测试。</p>
 <p>此外，制作最初就选用了PCL2启动器，可能主要是平时用的比较多吧，个人认为其操作逻辑要比HMCL合理。我甚至学习了如何配置PCL主页，如下面的效果（制作归零整合时还自定义了帮助文件，将其整合到了启动器内）。</p>
 <p><img src="https://www.hualigs.cn/image/6110f9b33a2c1.jpg"></p>
 <p>还有就是制作中做了很多小工作，比如一个附加的材质包，一份更新日志，一个模组指南，我不知道有多大的意义，但是当时就是这么做了，就不在细说了。</p>
 <h3 id="制作之后"><a href="#制作之后" class="headerlink" title="制作之后"></a>制作之后</h3><p>在做完了整合包之后我还花费了不少心思调整平衡性，修复BUG，优化游戏体验等一系列操作。关于BUG的修复，实在让我胃疼，虽然不少人下载了，但完全不会给出建设性反馈，帖子收到回复大概是2%的概率（其中大多数还是灌水的），大多数都是白嫖党（就像平时的我一样），基本全靠我自行开生存玩游戏实际体验，所以只会注意到我发现的问题进行修复，挺难受的。</p>
 <p>在之后就是一些总结和思考了，我打算不再这方面花费时间，而做完整合包后很长一段时间都没有打开MC，属实是看到游戏界面就想吐的那种感觉。不过制作整合包的过程中自己还是有学到挺多东西的，那段时间属实为我留下了深刻印象。</p>
 
-      
+        </div>
+
+        
+
+        
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/wenewenew/tags/MC/">#MC</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item">
+                        <a href="/wenewenew/tags/%E9%97%B2%E8%B0%88/">#闲谈</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/wenewenew/2021/08/19/about-blog/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">对于博客建设的总结与思考</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/wenewenew/2021/06/28/suiyizhitan2/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">也许我们不需要思考明天会怎样</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
     </div>
-    <footer class="entry-meta entry-footer">
-      
-	<span class="ico-folder"></span>
-    <a class="article-category-link" href="/wenewenew/categories/%E7%BB%8F%E9%AA%8C%E4%B9%8B%E8%B0%88/">经验之谈</a>
-
-      
-  <span class="ico-tags"></span>
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/wenewenew/tags/MC/" rel="tag">MC</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/wenewenew/tags/%E9%97%B2%E8%B0%88/" rel="tag">闲谈</a></li></ul>
-
-      
-    </footer>
-    <hr class="entry-footer-hr">
-  </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/wenewenew/2021/08/19/about-blog/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">上一篇</strong>
-      <div class="article-nav-title">
-        
-          对于博客建设的总结与思考
-        
-      </div>
-    </a>
-  
-  
-    <a href="/wenewenew/2021/06/28/suiyizhitan2/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">下一篇</strong>
-      <div class="article-nav-title">也许我们不需要思考明天会怎样</div>
-    </a>
-  
-</nav>
-
-  
-</article>
-
-<!-- Table of Contents -->
-
-  <aside id="sidebar">
-    <div id="toc" class="toc-article">
-    <strong class="toc-title">文章目录</strong>
-    
-      <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%83%8C%E6%99%AF%E8%AF%B4%E6%98%8E"><span class="nav-number">1.</span> <span class="nav-text">背景说明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8B"><span class="nav-number">2.</span> <span class="nav-text">制作过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%B6%E4%BD%9C%E4%B9%8B%E5%90%8E"><span class="nav-number">3.</span> <span class="nav-text">制作之后</span></a></li></ol>
-    
-    </div>
-  </aside>
-</section>
-        
-      </div>
-
-    </div>
-    <!-- <nav id="mobile-nav">
-  
-    <a href="/wenewenew/" class="mobile-nav-link">Home</a>
-  
-    <a href="/wenewenew/archives" class="mobile-nav-link">Archives</a>
-  
-    <a href="/wenewenew/categories" class="mobile-nav-link">Categories</a>
-  
-    <a href="/wenewenew/tags" class="mobile-nav-link">Tags</a>
-  
-    <a href="/wenewenew/video" class="mobile-nav-link">Video</a>
-  
-    <a href="/wenewenew/about" class="mobile-nav-link">About</a>
-  
-</nav> -->
-    <footer id="footer" class="site-footer">
-  
-
-  <div class="clearfix container">
-      <div class="site-info">
-	      &copy; 2022 Wenew&#39;s Blog All Rights Reserved.
-        
-      </div>
-      <div class="site-credit">
-        have a nice day!</a>
-      </div>
-  </div>
-</footer>
-
-
-<!-- min height -->
-
-<script>
-    var wrapdiv = document.getElementById("wrap");
-    var contentdiv = document.getElementById("content");
-
-    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
-    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
-
-
-    <!-- headerblur min height -->
-    
-    
-</script>
-    
-<div style="display: none;">
-  <script src="https://s11.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
 </div>
 
-<!-- mathjax config similar to math.stackexchange -->
 
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-      processEscapes: true
-    }
-  });
-</script>
+                
+            </div>
 
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-      tex2jax: {
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-      }
-    });
-</script>
+        </div>
 
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for(i=0; i < all.length; i += 1) {
-            all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-    });
-</script>
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2021</span>
+              -
+            
 
-<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
+            2022&nbsp;</i>&nbsp; </a>   Wenew's Blog All Rights Reserved. </a>
+        </div>
+        
+            <script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                
+            </div>
+        
+        <div class="theme-info info-item">
+                        </a>   不乱于心，不困于情，不畏将来，不念过往。 </a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%83%8C%E6%99%AF%E8%AF%B4%E6%98%8E"><span class="nav-text">背景说明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8B"><span class="nav-text">制作过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%B6%E4%BD%9C%E4%B9%8B%E5%90%8E"><span class="nav-text">制作之后</span></a></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
 
 
-  
-<link rel="stylesheet" href="/wenewenew/fancybox/jquery.fancybox.css">
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
 
-  
-<script src="/wenewenew/fancybox/jquery.fancybox.pack.js"></script>
+    
+
+</main>
 
 
 
 
-<script src="/wenewenew/js/script.js"></script>
-
-
-<script src="/wenewenew/js/bootstrap.js"></script>
-
+<script src="/wenewenew/js/utils.js"></script>
 
 <script src="/wenewenew/js/main.js"></script>
 
+<script src="/wenewenew/js/header-shrink.js"></script>
+
+<script src="/wenewenew/js/back2top.js"></script>
+
+<script src="/wenewenew/js/dark-light-toggle.js"></script>
+
+
+
+    
+<script src="/wenewenew/js/local-search.js"></script>
+
+
+
+
+    
+<script src="/wenewenew/js/code-copy.js"></script>
 
 
 
 
 
+<div class="post-scripts pjax">
+    
+        
+<script src="/wenewenew/js/left-side-toggle.js"></script>
+
+<script src="/wenewenew/js/libs/anime.min.js"></script>
+
+<script src="/wenewenew/js/toc.js"></script>
+
+    
+</div>
+
+
+    
+<script src="/wenewenew/js/libs/pjax.min.js"></script>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            KEEP.refresh();
+        });
+    });
+</script>
 
 
 
-
-
-	<script type="text/javascript">
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?6664626f2816330a34dac57b096845d8";
-      var s = document.getElementsByTagName("script")[0]; 
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
-
-
-
-  </div>
-
-  <a id="rocket" href="#top" class=""></a>
-  <script type="text/javascript" src="/js/totop.js" async=""></script>
 </body>
 </html>
