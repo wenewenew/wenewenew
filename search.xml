@@ -1,83 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>MC优化模组使用推荐</title>
-    <url>/wenewenew/2021/09/25/MC%E4%BC%98%E5%8C%96%E6%A8%A1%E7%BB%84%E4%BD%BF%E7%94%A8%E6%8E%A8%E8%8D%90/</url>
-    <content><![CDATA[<p>我一直都挺关注MC优化类模组的，包括之前做整合包的时候也是四处寻找各类优化模组，还是积累下来不少经验的，这篇文章主要会分享下我对优化模组的见解并给出一些推荐搭配。</p>
-<span id="more"></span>
-
-<blockquote>
-<p><strong>Before</strong></p>
-<p>Forge和Fabric是两种不同且互不兼容的模组加载器，&gt;1.16版本推荐优先考虑Fabric</p>
-<p>为方便访问，下面均链接至<a class="link"   href="https://www.mcmod.cn/" >MC百科<i class="fas fa-external-link-alt"></i></a>，请到百科相关链接找下载地址，有modrinth链接可以优先选择</p>
-<p>为尽量减少和其它模组冲突的意外状况，与过多模组冲突或早已不再维护的模组不会进行推荐</p>
-<p>篇幅有限，不可能说的面面俱到，我还是会备注一些重要内容，详情点击通往百科的链接即可</p>
-</blockquote>
-<h3 id="推荐列表："><a href="#推荐列表：" class="headerlink" title="推荐列表："></a>推荐列表：</h3><p>方案里会尽可能多的推荐优化模组，使用时根据游戏版本，有些模组可能不支持部分游戏版本，请自行点击链接到MC百科查看支持情况，若不支持，忽略此模组即可。</p>
-<h4 id="Forge："><a href="#Forge：" class="headerlink" title="Forge："></a>Forge：</h4><ul>
-<li><p><a class="link"   href="https://www.mcmod.cn/class/36.html" >高清修复-Optifine<i class="fas fa-external-link-alt"></i></a>：大名鼎鼎，几乎覆盖了所有的MC版本</p>
-</li>
-<li><p><a class="link"   href="https://www.mcmod.cn/class/978.html" >泡沫修复-FoamFix<i class="fas fa-external-link-alt"></i></a>：帮助减少游戏内存占用</p>
-</li>
-<li><p><a class="link"   href="https://www.mcmod.cn/class/1766.html" >磷-Phosphor<i class="fas fa-external-link-alt"></i></a>：光照机制优</p>
-</li>
-<li><p><a class="link"   href="https://www.mcmod.cn/class/3303.html" >星光-Starlight<i class="fas fa-external-link-alt"></i></a>：相比于磷是更进一步，效果更好，兼容性略差一些，<strong>请二选一</strong></p>
-</li>
-<li><p><a class="link"   href="https://www.mcmod.cn/class/1384.html" >更好的FPS-BetterFPS<i class="fas fa-external-link-alt"></i></a>：一般来说请选择riven的一半算法，否则可能负优化</p>
-</li>
-<li><p><a class="link"   href="https://www.mcmod.cn/class/2292.html" >锂-Lithium<i class="fas fa-external-link-alt"></i></a>：致力于在不修改原版游戏内容的前提下做出更多的优化改进</p>
-</li>
-<li><p><a class="link"   href="https://www.mcmod.cn/class/3056.html" >粒子渲染机制优化-Particle Culling<i class="fas fa-external-link-alt"></i></a>(1.12.2)/<a class="link"   href="https://www.mcmod.cn/class/3910.html" >粒子渲染机制优化-Cull Particles<i class="fas fa-external-link-alt"></i></a>：顾名思义</p>
-</li>
-<li><p><a class="link"   href="https://www.mcmod.cn/class/3058.html" >实体渲染机制优化-Entity Culling<i class="fas fa-external-link-alt"></i></a>/<a class="link"   href="https://www.mcmod.cn/class/3629.html" >实体渲染机制优化-Entity Culling Fabric/Forge<i class="fas fa-external-link-alt"></i></a>：同上</p>
-</li>
-</ul>
-<h4 id="Fabric："><a href="#Fabric：" class="headerlink" title="Fabric："></a>Fabric：</h4><blockquote>
-<p><strong>Info</strong></p>
-<p>Fabric下不推荐OptiFabric+Optifine的选择，需要光影请选择Iris/Canvas，如果你需要的是Optifine的其他功能，请往下翻，下面会给出Optinfine其他实用小功能的替代方案。</p>
-</blockquote>
-<ul>
-<li><p><a class="link"   href="https://www.mcmod.cn/class/2785.html" >钠-Sodium<i class="fas fa-external-link-alt"></i></a>：提供强力优化，FPS拯救者</p>
-</li>
-<li><p><a class="link"   href="https://www.mcmod.cn/class/3697.html" >Iris Shaders<i class="fas fa-external-link-alt"></i></a>：光影的新选择，可以秒切光影；<del>内置钠模组，请不要再单独加钠模组</del>（21.12.8，新版本似乎不再内置钠模组，详情查看百科内介绍）</p>
-</li>
-<li><p><a class="link"   href="https://www.mcmod.cn/class/3422.html" >流畅加载-Smooth Boot<i class="fas fa-external-link-alt"></i></a>：对于多线程CPU可以显著减少加载耗时</p>
-</li>
-<li><p><a class="link"   href="https://www.mcmod.cn/class/2292.html" >锂-Lithium<i class="fas fa-external-link-alt"></i></a>：致力于在不修改原版游戏内容的前提下做出更多的优化改进</p>
-</li>
-<li><p><a class="link"   href="https://www.mcmod.cn/class/3406.html" >氢-Hydrogen<i class="fas fa-external-link-alt"></i></a>：相比于锂是更加激进的优化，<strong>二选一</strong>即可</p>
-</li>
-<li><p><a class="link"   href="https://www.mcmod.cn/class/3511.html" >C^2M 引擎-C^2M-Engine<i class="fas fa-external-link-alt"></i></a>：提高区块的性能，官方推荐搭配锂和磷（最佳稳定性的好选择）</p>
-</li>
-<li><p><a class="link"   href="https://www.mcmod.cn/class/1766.html" >磷-Phosphor<i class="fas fa-external-link-alt"></i></a>：光照机制优化</p>
-</li>
-<li><p><a class="link"   href="https://www.mcmod.cn/class/3303.html" >星光-Starlight<i class="fas fa-external-link-alt"></i></a>：相比于磷是更进一步，效果更好，兼容性略差一些，<strong>请二选一</strong></p>
-</li>
-<li><p><a class="link"   href="https://www.mcmod.cn/class/3888.html" >铁氧体磁芯-FerriteCore<i class="fas fa-external-link-alt"></i></a>：以另一些不同方式减少内存占用</p>
-</li>
-<li><p><a class="link"   href="https://www.mcmod.cn/class/3629.html" >实体渲染机制优化-Entity Culling Fabric/Forge<i class="fas fa-external-link-alt"></i></a>：如名</p>
-</li>
-<li><p>！<a href="https://www.mcmod.cn/class/3632.html"><em>方块实体优化-Enhanced Block Entities</em></a>：对一大堆箱子的情况格外有效，和钠冲突，但也有<a class="link"   href="https://github.com/FoundationGames/EnhancedBlockEntities/discussions/7" >解决方案<i class="fas fa-external-link-alt"></i></a></p>
-</li>
-</ul>
-<blockquote>
-<p><strong>Tip</strong></p>
-<p>在Fabric下不使用OptiFabric而使用其它模组还原出Optifine的各种功能：<a class="link"   href="https://www.mcmod.cn/class/2785.html" >钠(不要光影)<i class="fas fa-external-link-alt"></i></a>/<a class="link"   href="https://www.mcmod.cn/class/3697.html" >Iris(有光影需求)<i class="fas fa-external-link-alt"></i></a>+<a class="link"   href="https://www.mcmod.cn/class/3551.html" >更好的钠视频设置按钮<i class="fas fa-external-link-alt"></i></a>+<a class="link"   href="https://www.mcmod.cn/class/4238.html" >更好的草方块<i class="fas fa-external-link-alt"></i></a>+<a class="link"   href="https://www.mcmod.cn/class/2954.html" >动态光源<i class="fas fa-external-link-alt"></i></a>+<a class="link"   href="https://www.mcmod.cn/class/4255.html" >C键放大<i class="fas fa-external-link-alt"></i></a>+<em>（<a class="link"   href="https://www.mcmod.cn/class/3850.html" >连接材质<i class="fas fa-external-link-alt"></i></a>&amp;<a class="link"   href="https://www.mcmod.cn/class/3413.html" >铟<i class="fas fa-external-link-alt"></i></a>）</em></p>
-</blockquote>
-<h3 id="BB几句："><a href="#BB几句：" class="headerlink" title="BB几句："></a>BB几句：</h3><p>如果你电脑很好，优化模组可以锦上添花，几百帧完全不是梦；如果你对电脑不是很好，优化模组对你将会是很大帮助，借此你可以更流畅地游玩更多模组；如果你的电脑很差，那优化模组或许能将你从电竞水平拉到能玩(doge)</p>
-<p>好了，现在你已经准备好了优化模组，可以流畅的…游玩原版了（bushi</p>
-<p>如果你想深入研究，这只是个开始，加了这些模组甚至不能称作一个底包，因为还缺少大量辅助模组，辅助模组的话要说起来只会更加复杂，也许以后有机会搞一下推荐。把一切准备就绪，你就可以加入有实际内容的模组了。</p>
-<p>有时候优化模组堆积太多也未必就是好事，正正得负也是有可能的。说了这么多，其实主要还是针对新版本，特别是进入1.17世界高度提提升，麻将的优化却做的远远不够。旧版本的话加个Optifine就完全没问题。</p>
-]]></content>
-      <categories>
-        <category>技术分享</category>
-      </categories>
-      <tags>
-        <tag>MC</tag>
-        <tag>教程</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>2021-2022个人年度小结</title>
     <url>/wenewenew/2022/01/03/2021-2022/</url>
     <content><![CDATA[<p>外面是黑漆漆一片，只有远处的灯光时而闪过。在火车上度过2021的最后一晚（公历），迎来2022的第一天也算是一种别样的经历。回顾我这这一年，似乎无事发生，而不知不觉中已至新的一年。</p>
@@ -137,45 +60,83 @@
       </tags>
   </entry>
   <entry>
-    <title>对于博客建设的总结与思考</title>
-    <url>/wenewenew/2021/08/19/about-blog/</url>
-    <content><![CDATA[<p>如果你正打算建一个个人博客的话，我劝你耗子尾汁(doge)，如果你只是满足一下自己的好奇心，那么现在可以立刻马上放弃，在现在这个时代，能愿意拿出时间来看你胡言乱语的人少之又少（我又在自己骂自己了），这也是我将我的个人博客定义为“开放且无人翻看的日记本”的一部分原因。如果你依然坚持那么往下看：</p>
+    <title>Windows个性化使用指南</title>
+    <url>/wenewenew/2021/04/24/Windows%E4%B8%AA%E6%80%A7%E5%8C%96%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</url>
+    <content><![CDATA[<p>&emsp;&emsp;老早就想要写一篇文章分享下win10使用必备软件和一些个人认为有必要的美化了，最近忙里偷闲写出来了这篇文章。（话说这种东西为毛要放在博客里<doge>）小白向，带佬们请自行判断。你也可以前往<a class="link"   href="https://zhutix.com/?_blank" >这里<i class="fas fa-external-link-alt"></i></a>自行探索，比我要专业的多。</p>
 <span id="more"></span>
 
-<blockquote>
-<p><strong>Warning</strong></p>
-<p>本人技术小白一只，专业不是计算机，以下全部只针对于基于Hexo的静态博客，并且这也不是一篇技术类文章，不过如果你是第一次接触个人博客的话，或许对你有所帮助。</p>
+<h3 id="背景-amp-说明"><a href="#背景-amp-说明" class="headerlink" title="背景&amp;说明"></a>背景&amp;说明</h3><p>&emsp;&emsp;个人算是个win的老用户了，XP、7、8、10都用过，现在已是win10的时代了，身边很多人对win的认知仍然停留在XP时代。我的感受就是身边的很多人会用电脑就是仅仅会”用”而已。完全做不到使用手机那种舒适和感觉。我本人看过许多的美化教程，尝试过挺多的软件，故纯主观地写这篇文章，以自己的方案做示例，将自身的使用经验分享给大家。希望能帮大家更加舒适地使用电脑。</p>
+<p>美化之类的东西肯定会占用一部分电脑性能并且有一定风险，请事先做好备份工作，我本人的理念是简单舒适，并不追求深度的美化,一般来说，只要你在使用现代的电脑，那么基本不用担心性能问题</p>
+<p>美化的尽头是原生是句名言，但是本人认为轻度的美化能带来巨大的感知提升，还是有必要的</p>
+<h3 id="改善外观"><a href="#改善外观" class="headerlink" title="改善外观"></a>改善外观</h3><blockquote>
+<p>本部分来说一说纯美化的方面，有些是可选项，请根据自身情况判断（如果你实在不知道自己是否需要某种效果，可以先按部就班地来尝试一下）</p>
 </blockquote>
-<h4 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h4><p>我也忘了当初是因为什么来建博客的了，一般来说，我们日常生活中是很少能接触到个人博客这种东西的。不过最后我还是弄了出来，现在想来属实是一段神奇的经历。</p>
-<p>即便对着教程，看着视频来按部就班地来也会出现一些意料之外的问题，对我这种没有任何相关知识储备的人来说会造成极大影响，这也是为什么我第一次尝试时以失败告终。不过在那之后一段时间比较清闲的时候我再一次挑战建立博客，而这次成功了。</p>
-<h4 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h4><p>第一次的成功多半在于主题的选择，在尝试了一些主题后无意间发现的<a class="link"   href="https://github.com/fluid-dev/hexo-theme-fluid" >Fluid<i class="fas fa-external-link-alt"></i></a>主题提供了非常完善的中文使用说明和问题解答，帮我解决了不少问题，有了之前的经历也才有了最近更换主题的快速成功。</p>
-<p>既然建好了就要考虑拿来做什么了，其实在第一次开放之前我就写了几篇文章了，只是后来偷偷删掉了，再然后嘛就是比较正常的写文章、大概每个月会写一篇吧，主要还是看我心情和空闲时间是否充足，大概就是记录生活啥的（顺便一句题外话，我准备考科目二的时候考试在之前两天取消了，因为疫情，F**k。）。其实后来慢慢的我发现博客这东西挺合我胃口的，鄙人不善于言辞，就平时朋友圈、QQ动态从不发东西，而个人博客提供了一个很好的平台，可以让我不加遮掩地输出我的一些思考和想法。</p>
-<p>虽然说这完全不是技术、教程类文章，但我还是想总结一下建立博客的总体思路：</p>
-<blockquote>
-<p><strong>Progress</strong></p>
-<p>↳做好准备工作、可以去找视频教程根据说明准备好需要的软件条件</p>
-<p>↳确定建立的平台、基于<a class="link"   href="https://gitee.com/" >Gitee<i class="fas fa-external-link-alt"></i></a>还是<a class="link"   href="https://github.com/" >Github<i class="fas fa-external-link-alt"></i></a>（在国内不太稳定）或是其他我就不知道了</p>
-<p>↳开始建立过程，建议找个图文教程参考一下，最好是时间比较近的</p>
-<p>↳个性化你的博客，这个完全取决于自己，一般是使用<a class="link"   href="https://hexo.io/themes/" >主题<i class="fas fa-external-link-alt"></i></a>配合一些<a class="link"   href="https://hexo.io/plugins/" >插件<i class="fas fa-external-link-alt"></i></a></p>
-<p>↳最后，写博客，可能需要用到一些语法，不过你最好知道自己要写什么</p>
+<h4 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h4><ul>
+<li><p>【基本】找一张喜欢/耐看的壁纸（应当基于屏幕的分辨率&lt;桌面右键-显示设置-显示分辨率&gt;）</p>
+</li>
+<li><p>【推荐】获取<a class="link"   href="https://github.com/TranslucentTB/TranslucentTB/releases?_blank" >TranslucerTB<i class="fas fa-external-link-alt"></i></a>（<a class="link"   href="https://zhutix.com/tools/translucenttb/?_blank" >备用地址<i class="fas fa-external-link-alt"></i></a>，也可以从Microsoft Store搜索获取&lt;建议那个汉化版本的&gt;，需要微软账号，需要打开Windows更新）</p>
+</li>
+<li><p>【推荐】<a class="link"   href="https://zhutix.com/tools/7tsp-gui/?_blank" >7TSPGUI<i class="fas fa-external-link-alt"></i></a>（<strong>此版本仅兼容Win10 1903/1909/2004/20H2</strong>需要.NET支持，如果打开后报错，请安装<a class="link"   href="https://jingyan.baidu.com/article/84b4f56503f52220f7da321e.html?_blank" >.NET3.5<i class="fas fa-external-link-alt"></i></a>）</p>
+</li>
+<li><p>获取<a class="link"   href="https://www.rainmeter.net/?_blank" >Rainmeter<i class="fas fa-external-link-alt"></i></a>(即雨滴皮肤，默认官网，<a class="link"   href="https://zhutix.com/tools/rainmeter-dw/?_blank" >备用地址<i class="fas fa-external-link-alt"></i></a>)</p>
+</li>
+<li><p>进阶玩法，<a class="link"   href="https://zhutix.com/tag/10t/?_blank" >更多<i class="fas fa-external-link-alt"></i></a></p>
+</li>
+</ul>
+<h4 id="开始使用"><a href="#开始使用" class="headerlink" title="开始使用"></a>开始使用</h4><blockquote>
+<p>请先自行安装好准备好的软件（Ps.如果你家C盘不是很大，请不要一股脑的装到C盘，即使很大也不推荐）。下面过程中会产生很多文件，请自行做好整理（憋像撒子一样全仍在桌面）</p>
 </blockquote>
-<h4 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h4><h5 id="对于Hexo博客的认知："><a href="#对于Hexo博客的认知：" class="headerlink" title="对于Hexo博客的认知："></a>对于Hexo博客的认知：</h5><ul>
-<li>优势：部署方便、流程简单、对技术要求不高</li>
-<li>缺陷：不能动态更新，所以有时候需要刷新才能看到新内容</li>
+<ul>
+<li><p>【基本】桌面右键-个性化-浏览-选择你准备好的壁纸</p>
+</li>
+<li><p>【推荐】打开TranslucerTB并设置开机启动然后配置各种状态下的效果                                                                     </p>
+</li>
+<li><p>【推荐】7TSP可以更改系统默认图标(实际上只能替换部分，但效果还是很不错的请自行下载喜欢的图标包（请注意整体风格的搭配），可以来<a class="link"   href="https://zhutix.com/tag/7tsp/?_blank" >这里<i class="fas fa-external-link-alt"></i></a>。</p>
+<p><img src="https://ae01.alicdn.com/kf/Ud7c8f67d0fa444938af60197055b28f6e.jpg" alt="一种效果参考图"></p>
+</li>
+<li><p>下载喜欢的<a class="link"   href="https://zhutix.com/tag/rainmeter/?post_order=like?_blank" >雨滴皮肤<i class="fas fa-external-link-alt"></i></a>（请注意整体风格的搭配），打开Rainmmeter。解压皮肤后双击即可安装，可以按照发布者的说明进行一些基础的调整（Rainmeter有很多高级玩法，有兴趣请自行探索）我需求比较简单。<img src="https://ae01.alicdn.com/kf/Ueba48e86cd004f2b8f1c1d4fc46b6b7fy.jpg" alt="我的桌面"  /></p>
+</li>
+<li><p>【推荐】更改鼠标指针方案：可以来<a class="link"   href="https://zhutix.com/tag/cursors/" >这里<i class="fas fa-external-link-alt"></i></a>或者其他地方下载好文件，解压文件，打开文件夹，选中inf文件右键安装即可，一般会直接提示你右键安装。<img src="https://ae01.alicdn.com/kf/Ud5a52f78d5b4430385a2b04d1dc3ca6eP.jpg"></p>
+<p>在弹出的界面内选择想要的方案并应用即可（也可以从设置-设备-鼠标-其他鼠标选项-指针打开此界面；当然，你也可以从控制面板进行设置，会更方便一些）。</p>
+</li>
+<li><p>【附加】任务栏图标居中（如上图），个人推荐<a class="link"   href="https://www.zhihu.com/question/351572304/answer/891853815?_blank" >这种<i class="fas fa-external-link-alt"></i></a>方法（请自行调整到合适的位置Ps.这并不是我的知乎账号），试过的一些软件都有图标闪烁等问题。</p>
+</li>
+<li><p>【附加】此项可用于配合Rainmeter使用。win10右下角系统图标都是可以关闭的（比如时钟、音量、网络），任务栏空白处右键-任务栏设置(T)-弹出下面界面-点击“打开或关闭系统图标”-自行更改即可。</p>
+<p><img src="https://ae01.alicdn.com/kf/U99d855c4dcb34d1b83e76955079e6c23j.jpg"></p>
+</li>
 </ul>
-<h5 id="对于博客流量的看法："><a href="#对于博客流量的看法：" class="headerlink" title="对于博客流量的看法："></a>对于博客流量的看法：</h5><ul>
-<li>我之前其实尝试过做一些宣传的，不过意义并不大，现在对此就非常的佛系了</li>
+<h3 id="实用工具"><a href="#实用工具" class="headerlink" title="实用工具"></a>实用工具</h3><blockquote>
+<p>实用工具请根据自己需求选择，自行判断是否需要设为开机启动项（Ps.白教，任务栏空白处右键-任务管理器-启动-即可管理开机启动项&lt;也可以从安全软件中管理&gt;）</p>
+</blockquote>
+<ul>
+<li><p><a class="link"   href="https://github.com/QL-Win/QuickLook/releases/tag/3.6.11?_blank" >QuickLook<i class="fas fa-external-link-alt"></i></a>（空格键快速预览文件&lt;文件夹显示基本信息&gt;，有扩展插件，支持众多文件类型；同样微软商店也有，上面已说明要求）</p>
+<p><img src="https://ae01.alicdn.com/kf/U269d512128334344a02c7920f4ae2a18H.jpg" alt="快速预览图片"></p>
+<p><img src="https://ae01.alicdn.com/kf/U46f69fc1e74c4c408fbb06486603f223P.jpg" alt="磁盘分区预览效果"></p>
+</li>
+<li><p><a class="link"   href="https://u.tools/?_blank" >uTools<i class="fas fa-external-link-alt"></i></a>（优秀的国产工具，我主要用于快速启动应用&lt;这样可以删掉桌面所有快捷方式图标&gt;和搜索，支持拼音和首字母，支持全局快捷键，有一大堆小插件，类似的软件有挺多的，个人推荐这个&gt;&gt;自行摸索，不会使用可以先阅读<a class="link"   href="https://u.tools/docs/guide/about-uTools.html?_blank" >官方文档<i class="fas fa-external-link-alt"></i></a>&lt;&lt;Ps.任何东西使用前先读一读readme总没坏处）</p>
+<p><img src="https://ae01.alicdn.com/kf/U4efa9b166ef6453498f4713f5017a771d.jpg"></p>
+</li>
+<li><p><a class="link"   href="https://www.huorong.cn/?_blank" >火绒安全软件<i class="fas fa-external-link-alt"></i></a>（业界良心，如果你是老司机，裸奔也完全没问题，个人还是喜欢加个安全软件，弹窗拦截功能一定要加上，火绒十分安静&lt;你基本不会意识到它的存在&gt;）</p>
+</li>
+<li><p><a class="link"   href="https://zhutix.com/10tutorials/yjysms/?_blank" >右键颜色模式快捷键<i class="fas fa-external-link-alt"></i></a>（大概是某位大佬做的小工具，在桌面右键快捷切换深色和浅色模式，按需选择即可）</p>
+</li>
+<li><p><a class="link"   href="https://zhutix.com/tag/10t/?_blank" >更多<i class="fas fa-external-link-alt"></i></a>（美化的道路永无止境，有兴趣请自行去探索）                                          </p>
+</li>
 </ul>
-<h5 id="对于今后的一些想法："><a href="#对于今后的一些想法：" class="headerlink" title="对于今后的一些想法："></a>对于今后的一些想法：</h5><ul>
-<li>现在此博客对我来说更像是我的个人空间，一个避风港，表达出我想要的东西，我认为这就足够了，今后会尽量坚持下去的。</li>
+<h3 id="附加说明"><a href="#附加说明" class="headerlink" title="附加说明"></a>附加说明</h3><ul>
+<li>关于<a class="link"   href="https://zhutix.com/tag/win10-zhuti/?_blank" >主题包<i class="fas fa-external-link-alt"></i></a>：基本上算是深度的美化了，个人不推荐，别人整合的未必是你喜欢的，当然，你也可以从中借鉴一些东西。</li>
+<li>关于动态壁纸：动态壁纸原理大概就是在桌面循环播放一个视频，相对算是比较占用资源的，其实也就图个新鲜感，我现在是没有兴趣去整了。你可以找<a class="link"   href="https://store.steampowered.com/app/431960/Wallpaper_Engine/?_blank" >WallpaperEngine<i class="fas fa-external-link-alt"></i></a>（去创意工坊看看）、<a class="link"   href="https://store.steampowered.com/app/979560/RainWallpaper/?_blank" >RainWallpaper<i class="fas fa-external-link-alt"></i></a>，还有免费的<a class="link"   href="https://store.steampowered.com/app/1010800/Wallpaper_Maker/?_blank" >Wallpaper Maker<i class="fas fa-external-link-alt"></i></a> （造物主视频桌面）,and so on.链接都是Steam上的，不过其实就是个加载软件，最主要的应该是你要找到自己喜欢的素材。</li>
 </ul>
+<blockquote>
+<p>个人以为，美化追求的应当是简洁高效舒适，过度的美化那就有点给别人看的意味了。我是以自己的使用作为例子，推荐完全主观，具体的实施交给你们，总之适合自己的才是最好的。</p>
+</blockquote>
 ]]></content>
       <categories>
-        <category>经验之谈</category>
+        <category>技术分享</category>
       </categories>
       <tags>
-        <tag>小结</tag>
-        <tag>闲谈</tag>
+        <tag>Windows</tag>
+        <tag>教程</tag>
       </tags>
   </entry>
   <entry>
@@ -263,88 +224,127 @@
         <category>技术分享</category>
       </categories>
       <tags>
-        <tag>MC</tag>
         <tag>教程</tag>
+        <tag>MC</tag>
       </tags>
   </entry>
   <entry>
-    <title>Windows个性化使用指南</title>
-    <url>/wenewenew/2021/04/24/Windows%E4%B8%AA%E6%80%A7%E5%8C%96%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</url>
-    <content><![CDATA[<p>&emsp;&emsp;老早就想要写一篇文章分享下win10使用必备软件和一些个人认为有必要的美化了，最近忙里偷闲写出来了这篇文章。（话说这种东西为毛要放在博客里<doge>）小白向，带佬们请自行判断。你也可以前往<a class="link"   href="https://zhutix.com/?_blank" >这里<i class="fas fa-external-link-alt"></i></a>自行探索，比我要专业的多。</p>
+    <title>MC优化模组使用推荐</title>
+    <url>/wenewenew/2021/09/25/MC%E4%BC%98%E5%8C%96%E6%A8%A1%E7%BB%84%E4%BD%BF%E7%94%A8%E6%8E%A8%E8%8D%90/</url>
+    <content><![CDATA[<p>我一直都挺关注MC优化类模组的，包括之前做整合包的时候也是四处寻找各类优化模组，还是积累下来不少经验的，这篇文章主要会分享下我对优化模组的见解并给出一些推荐搭配。</p>
 <span id="more"></span>
 
-<h3 id="背景-amp-说明"><a href="#背景-amp-说明" class="headerlink" title="背景&amp;说明"></a>背景&amp;说明</h3><p>&emsp;&emsp;个人算是个win的老用户了，XP、7、8、10都用过，现在已是win10的时代了，身边很多人对win的认知仍然停留在XP时代。我的感受就是身边的很多人会用电脑就是仅仅会”用”而已。完全做不到使用手机那种舒适和感觉。我本人看过许多的美化教程，尝试过挺多的软件，故纯主观地写这篇文章，以自己的方案做示例，将自身的使用经验分享给大家。希望能帮大家更加舒适地使用电脑。</p>
-<p>美化之类的东西肯定会占用一部分电脑性能并且有一定风险，请事先做好备份工作，我本人的理念是简单舒适，并不追求深度的美化,一般来说，只要你在使用现代的电脑，那么基本不用担心性能问题</p>
-<p>美化的尽头是原生是句名言，但是本人认为轻度的美化能带来巨大的感知提升，还是有必要的</p>
-<h3 id="改善外观"><a href="#改善外观" class="headerlink" title="改善外观"></a>改善外观</h3><blockquote>
-<p>本部分来说一说纯美化的方面，有些是可选项，请根据自身情况判断（如果你实在不知道自己是否需要某种效果，可以先按部就班地来尝试一下）</p>
+<blockquote>
+<p><strong>Before</strong></p>
+<p>Forge和Fabric是两种不同且互不兼容的模组加载器，&gt;1.16版本推荐优先考虑Fabric</p>
+<p>为方便访问，下面均链接至<a class="link"   href="https://www.mcmod.cn/" >MC百科<i class="fas fa-external-link-alt"></i></a>，请到百科相关链接找下载地址，有modrinth链接可以优先选择</p>
+<p>为尽量减少和其它模组冲突的意外状况，与过多模组冲突或早已不再维护的模组不会进行推荐</p>
+<p>篇幅有限，不可能说的面面俱到，我还是会备注一些重要内容，详情点击通往百科的链接即可</p>
 </blockquote>
-<h4 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h4><ul>
-<li><p>【基本】找一张喜欢/耐看的壁纸（应当基于屏幕的分辨率&lt;桌面右键-显示设置-显示分辨率&gt;）</p>
+<h3 id="推荐列表："><a href="#推荐列表：" class="headerlink" title="推荐列表："></a>推荐列表：</h3><p>方案里会尽可能多的推荐优化模组，使用时根据游戏版本，有些模组可能不支持部分游戏版本，请自行点击链接到MC百科查看支持情况，若不支持，忽略此模组即可。</p>
+<h4 id="Forge："><a href="#Forge：" class="headerlink" title="Forge："></a>Forge：</h4><ul>
+<li><p><a class="link"   href="https://www.mcmod.cn/class/36.html" >高清修复-Optifine<i class="fas fa-external-link-alt"></i></a>：大名鼎鼎，几乎覆盖了所有的MC版本</p>
 </li>
-<li><p>【推荐】获取<a class="link"   href="https://github.com/TranslucentTB/TranslucentTB/releases?_blank" >TranslucerTB<i class="fas fa-external-link-alt"></i></a>（<a class="link"   href="https://zhutix.com/tools/translucenttb/?_blank" >备用地址<i class="fas fa-external-link-alt"></i></a>，也可以从Microsoft Store搜索获取&lt;建议那个汉化版本的&gt;，需要微软账号，需要打开Windows更新）</p>
+<li><p><a class="link"   href="https://www.mcmod.cn/class/978.html" >泡沫修复-FoamFix<i class="fas fa-external-link-alt"></i></a>：帮助减少游戏内存占用</p>
 </li>
-<li><p>【推荐】<a class="link"   href="https://zhutix.com/tools/7tsp-gui/?_blank" >7TSPGUI<i class="fas fa-external-link-alt"></i></a>（<strong>此版本仅兼容Win10 1903/1909/2004/20H2</strong>需要.NET支持，如果打开后报错，请安装<a class="link"   href="https://jingyan.baidu.com/article/84b4f56503f52220f7da321e.html?_blank" >.NET3.5<i class="fas fa-external-link-alt"></i></a>）</p>
+<li><p><a class="link"   href="https://www.mcmod.cn/class/1766.html" >磷-Phosphor<i class="fas fa-external-link-alt"></i></a>：光照机制优</p>
 </li>
-<li><p>获取<a class="link"   href="https://www.rainmeter.net/?_blank" >Rainmeter<i class="fas fa-external-link-alt"></i></a>(即雨滴皮肤，默认官网，<a class="link"   href="https://zhutix.com/tools/rainmeter-dw/?_blank" >备用地址<i class="fas fa-external-link-alt"></i></a>)</p>
+<li><p><a class="link"   href="https://www.mcmod.cn/class/3303.html" >星光-Starlight<i class="fas fa-external-link-alt"></i></a>：相比于磷是更进一步，效果更好，兼容性略差一些，<strong>请二选一</strong></p>
 </li>
-<li><p>进阶玩法，<a class="link"   href="https://zhutix.com/tag/10t/?_blank" >更多<i class="fas fa-external-link-alt"></i></a></p>
+<li><p><a class="link"   href="https://www.mcmod.cn/class/1384.html" >更好的FPS-BetterFPS<i class="fas fa-external-link-alt"></i></a>：一般来说请选择riven的一半算法，否则可能负优化</p>
+</li>
+<li><p><a class="link"   href="https://www.mcmod.cn/class/2292.html" >锂-Lithium<i class="fas fa-external-link-alt"></i></a>：致力于在不修改原版游戏内容的前提下做出更多的优化改进</p>
+</li>
+<li><p><a class="link"   href="https://www.mcmod.cn/class/3056.html" >粒子渲染机制优化-Particle Culling<i class="fas fa-external-link-alt"></i></a>(1.12.2)/<a class="link"   href="https://www.mcmod.cn/class/3910.html" >粒子渲染机制优化-Cull Particles<i class="fas fa-external-link-alt"></i></a>：顾名思义</p>
+</li>
+<li><p><a class="link"   href="https://www.mcmod.cn/class/3058.html" >实体渲染机制优化-Entity Culling<i class="fas fa-external-link-alt"></i></a>/<a class="link"   href="https://www.mcmod.cn/class/3629.html" >实体渲染机制优化-Entity Culling Fabric/Forge<i class="fas fa-external-link-alt"></i></a>：同上</p>
 </li>
 </ul>
-<h4 id="开始使用"><a href="#开始使用" class="headerlink" title="开始使用"></a>开始使用</h4><blockquote>
-<p>请先自行安装好准备好的软件（Ps.如果你家C盘不是很大，请不要一股脑的装到C盘，即使很大也不推荐）。下面过程中会产生很多文件，请自行做好整理（憋像撒子一样全仍在桌面）</p>
-</blockquote>
-<ul>
-<li><p>【基本】桌面右键-个性化-浏览-选择你准备好的壁纸</p>
-</li>
-<li><p>【推荐】打开TranslucerTB并设置开机启动然后配置各种状态下的效果                                                                     </p>
-</li>
-<li><p>【推荐】7TSP可以更改系统默认图标(实际上只能替换部分，但效果还是很不错的请自行下载喜欢的图标包（请注意整体风格的搭配），可以来<a class="link"   href="https://zhutix.com/tag/7tsp/?_blank" >这里<i class="fas fa-external-link-alt"></i></a>。</p>
-<p><img src="https://ae01.alicdn.com/kf/Ud7c8f67d0fa444938af60197055b28f6e.jpg" alt="一种效果参考图"></p>
-</li>
-<li><p>下载喜欢的<a class="link"   href="https://zhutix.com/tag/rainmeter/?post_order=like?_blank" >雨滴皮肤<i class="fas fa-external-link-alt"></i></a>（请注意整体风格的搭配），打开Rainmmeter。解压皮肤后双击即可安装，可以按照发布者的说明进行一些基础的调整（Rainmeter有很多高级玩法，有兴趣请自行探索）我需求比较简单。<img src="https://ae01.alicdn.com/kf/Ueba48e86cd004f2b8f1c1d4fc46b6b7fy.jpg" alt="我的桌面"  /></p>
-</li>
-<li><p>【推荐】更改鼠标指针方案：可以来<a class="link"   href="https://zhutix.com/tag/cursors/" >这里<i class="fas fa-external-link-alt"></i></a>或者其他地方下载好文件，解压文件，打开文件夹，选中inf文件右键安装即可，一般会直接提示你右键安装。<img src="https://ae01.alicdn.com/kf/Ud5a52f78d5b4430385a2b04d1dc3ca6eP.jpg"></p>
-<p>在弹出的界面内选择想要的方案并应用即可（也可以从设置-设备-鼠标-其他鼠标选项-指针打开此界面；当然，你也可以从控制面板进行设置，会更方便一些）。</p>
-</li>
-<li><p>【附加】任务栏图标居中（如上图），个人推荐<a class="link"   href="https://www.zhihu.com/question/351572304/answer/891853815?_blank" >这种<i class="fas fa-external-link-alt"></i></a>方法（请自行调整到合适的位置Ps.这并不是我的知乎账号），试过的一些软件都有图标闪烁等问题。</p>
-</li>
-<li><p>【附加】此项可用于配合Rainmeter使用。win10右下角系统图标都是可以关闭的（比如时钟、音量、网络），任务栏空白处右键-任务栏设置(T)-弹出下面界面-点击“打开或关闭系统图标”-自行更改即可。</p>
-<p><img src="https://ae01.alicdn.com/kf/U99d855c4dcb34d1b83e76955079e6c23j.jpg"></p>
-</li>
-</ul>
-<h3 id="实用工具"><a href="#实用工具" class="headerlink" title="实用工具"></a>实用工具</h3><blockquote>
-<p>实用工具请根据自己需求选择，自行判断是否需要设为开机启动项（Ps.白教，任务栏空白处右键-任务管理器-启动-即可管理开机启动项&lt;也可以从安全软件中管理&gt;）</p>
+<h4 id="Fabric："><a href="#Fabric：" class="headerlink" title="Fabric："></a>Fabric：</h4><blockquote>
+<p><strong>Info</strong></p>
+<p>Fabric下不推荐OptiFabric+Optifine的选择，需要光影请选择Iris/Canvas，如果你需要的是Optifine的其他功能，请往下翻，下面会给出Optinfine其他实用小功能的替代方案。</p>
 </blockquote>
 <ul>
-<li><p><a class="link"   href="https://github.com/QL-Win/QuickLook/releases/tag/3.6.11?_blank" >QuickLook<i class="fas fa-external-link-alt"></i></a>（空格键快速预览文件&lt;文件夹显示基本信息&gt;，有扩展插件，支持众多文件类型；同样微软商店也有，上面已说明要求）</p>
-<p><img src="https://ae01.alicdn.com/kf/U269d512128334344a02c7920f4ae2a18H.jpg" alt="快速预览图片"></p>
-<p><img src="https://ae01.alicdn.com/kf/U46f69fc1e74c4c408fbb06486603f223P.jpg" alt="磁盘分区预览效果"></p>
+<li><p><a class="link"   href="https://www.mcmod.cn/class/2785.html" >钠-Sodium<i class="fas fa-external-link-alt"></i></a>：提供强力优化，FPS拯救者</p>
 </li>
-<li><p><a class="link"   href="https://u.tools/?_blank" >uTools<i class="fas fa-external-link-alt"></i></a>（优秀的国产工具，我主要用于快速启动应用&lt;这样可以删掉桌面所有快捷方式图标&gt;和搜索，支持拼音和首字母，支持全局快捷键，有一大堆小插件，类似的软件有挺多的，个人推荐这个&gt;&gt;自行摸索，不会使用可以先阅读<a class="link"   href="https://u.tools/docs/guide/about-uTools.html?_blank" >官方文档<i class="fas fa-external-link-alt"></i></a>&lt;&lt;Ps.任何东西使用前先读一读readme总没坏处）</p>
-<p><img src="https://ae01.alicdn.com/kf/U4efa9b166ef6453498f4713f5017a771d.jpg"></p>
+<li><p><a class="link"   href="https://www.mcmod.cn/class/3697.html" >Iris Shaders<i class="fas fa-external-link-alt"></i></a>：光影的新选择，可以秒切光影；<del>内置钠模组，请不要再单独加钠模组</del>（21.12.8，新版本似乎不再内置钠模组，详情查看百科内介绍）</p>
 </li>
-<li><p><a class="link"   href="https://www.huorong.cn/?_blank" >火绒安全软件<i class="fas fa-external-link-alt"></i></a>（业界良心，如果你是老司机，裸奔也完全没问题，个人还是喜欢加个安全软件，弹窗拦截功能一定要加上，火绒十分安静&lt;你基本不会意识到它的存在&gt;）</p>
+<li><p><a class="link"   href="https://www.mcmod.cn/class/3422.html" >流畅加载-Smooth Boot<i class="fas fa-external-link-alt"></i></a>：对于多线程CPU可以显著减少加载耗时</p>
 </li>
-<li><p><a class="link"   href="https://zhutix.com/10tutorials/yjysms/?_blank" >右键颜色模式快捷键<i class="fas fa-external-link-alt"></i></a>（大概是某位大佬做的小工具，在桌面右键快捷切换深色和浅色模式，按需选择即可）</p>
+<li><p><a class="link"   href="https://www.mcmod.cn/class/2292.html" >锂-Lithium<i class="fas fa-external-link-alt"></i></a>：致力于在不修改原版游戏内容的前提下做出更多的优化改进</p>
 </li>
-<li><p><a class="link"   href="https://zhutix.com/tag/10t/?_blank" >更多<i class="fas fa-external-link-alt"></i></a>（美化的道路永无止境，有兴趣请自行去探索）                                          </p>
+<li><p><a class="link"   href="https://www.mcmod.cn/class/3406.html" >氢-Hydrogen<i class="fas fa-external-link-alt"></i></a>：相比于锂是更加激进的优化，<strong>二选一</strong>即可</p>
 </li>
-</ul>
-<h3 id="附加说明"><a href="#附加说明" class="headerlink" title="附加说明"></a>附加说明</h3><ul>
-<li>关于<a class="link"   href="https://zhutix.com/tag/win10-zhuti/?_blank" >主题包<i class="fas fa-external-link-alt"></i></a>：基本上算是深度的美化了，个人不推荐，别人整合的未必是你喜欢的，当然，你也可以从中借鉴一些东西。</li>
-<li>关于动态壁纸：动态壁纸原理大概就是在桌面循环播放一个视频，相对算是比较占用资源的，其实也就图个新鲜感，我现在是没有兴趣去整了。你可以找<a class="link"   href="https://store.steampowered.com/app/431960/Wallpaper_Engine/?_blank" >WallpaperEngine<i class="fas fa-external-link-alt"></i></a>（去创意工坊看看）、<a class="link"   href="https://store.steampowered.com/app/979560/RainWallpaper/?_blank" >RainWallpaper<i class="fas fa-external-link-alt"></i></a>，还有免费的<a class="link"   href="https://store.steampowered.com/app/1010800/Wallpaper_Maker/?_blank" >Wallpaper Maker<i class="fas fa-external-link-alt"></i></a> （造物主视频桌面）,and so on.链接都是Steam上的，不过其实就是个加载软件，最主要的应该是你要找到自己喜欢的素材。</li>
+<li><p><a class="link"   href="https://www.mcmod.cn/class/3511.html" >C^2M 引擎-C^2M-Engine<i class="fas fa-external-link-alt"></i></a>：提高区块的性能，官方推荐搭配锂和磷（最佳稳定性的好选择）</p>
+</li>
+<li><p><a class="link"   href="https://www.mcmod.cn/class/1766.html" >磷-Phosphor<i class="fas fa-external-link-alt"></i></a>：光照机制优化</p>
+</li>
+<li><p><a class="link"   href="https://www.mcmod.cn/class/3303.html" >星光-Starlight<i class="fas fa-external-link-alt"></i></a>：相比于磷是更进一步，效果更好，兼容性略差一些，<strong>请二选一</strong></p>
+</li>
+<li><p><a class="link"   href="https://www.mcmod.cn/class/3888.html" >铁氧体磁芯-FerriteCore<i class="fas fa-external-link-alt"></i></a>：以另一些不同方式减少内存占用</p>
+</li>
+<li><p><a class="link"   href="https://www.mcmod.cn/class/3629.html" >实体渲染机制优化-Entity Culling Fabric/Forge<i class="fas fa-external-link-alt"></i></a>：如名</p>
+</li>
+<li><p>！<a href="https://www.mcmod.cn/class/3632.html"><em>方块实体优化-Enhanced Block Entities</em></a>：对一大堆箱子的情况格外有效，和钠冲突，但也有<a class="link"   href="https://github.com/FoundationGames/EnhancedBlockEntities/discussions/7" >解决方案<i class="fas fa-external-link-alt"></i></a></p>
+</li>
 </ul>
 <blockquote>
-<p>个人以为，美化追求的应当是简洁高效舒适，过度的美化那就有点给别人看的意味了。我是以自己的使用作为例子，推荐完全主观，具体的实施交给你们，总之适合自己的才是最好的。</p>
+<p><strong>Tip</strong></p>
+<p>在Fabric下不使用OptiFabric而使用其它模组还原出Optifine的各种功能：<a class="link"   href="https://www.mcmod.cn/class/2785.html" >钠(不要光影)<i class="fas fa-external-link-alt"></i></a>/<a class="link"   href="https://www.mcmod.cn/class/3697.html" >Iris(有光影需求)<i class="fas fa-external-link-alt"></i></a>+<a class="link"   href="https://www.mcmod.cn/class/3551.html" >更好的钠视频设置按钮<i class="fas fa-external-link-alt"></i></a>+<a class="link"   href="https://www.mcmod.cn/class/4238.html" >更好的草方块<i class="fas fa-external-link-alt"></i></a>+<a class="link"   href="https://www.mcmod.cn/class/2954.html" >动态光源<i class="fas fa-external-link-alt"></i></a>+<a class="link"   href="https://www.mcmod.cn/class/4255.html" >C键放大<i class="fas fa-external-link-alt"></i></a>+<em>（<a class="link"   href="https://www.mcmod.cn/class/3850.html" >连接材质<i class="fas fa-external-link-alt"></i></a>&amp;<a class="link"   href="https://www.mcmod.cn/class/3413.html" >铟<i class="fas fa-external-link-alt"></i></a>）</em></p>
 </blockquote>
+<h3 id="BB几句："><a href="#BB几句：" class="headerlink" title="BB几句："></a>BB几句：</h3><p>如果你电脑很好，优化模组可以锦上添花，几百帧完全不是梦；如果你对电脑不是很好，优化模组对你将会是很大帮助，借此你可以更流畅地游玩更多模组；如果你的电脑很差，那优化模组或许能将你从电竞水平拉到能玩(doge)</p>
+<p>好了，现在你已经准备好了优化模组，可以流畅的…游玩原版了（bushi</p>
+<p>如果你想深入研究，这只是个开始，加了这些模组甚至不能称作一个底包，因为还缺少大量辅助模组，辅助模组的话要说起来只会更加复杂，也许以后有机会搞一下推荐。把一切准备就绪，你就可以加入有实际内容的模组了。</p>
+<p>有时候优化模组堆积太多也未必就是好事，正正得负也是有可能的。说了这么多，其实主要还是针对新版本，特别是进入1.17世界高度提提升，麻将的优化却做的远远不够。旧版本的话加个Optifine就完全没问题。</p>
 ]]></content>
       <categories>
         <category>技术分享</category>
       </categories>
       <tags>
         <tag>教程</tag>
-        <tag>Windows</tag>
+        <tag>MC</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>对于博客建设的总结与思考</title>
+    <url>/wenewenew/2021/08/19/about-blog/</url>
+    <content><![CDATA[<p>如果你正打算建一个个人博客的话，我劝你耗子尾汁(doge)，如果你只是满足一下自己的好奇心，那么现在可以立刻马上放弃，在现在这个时代，能愿意拿出时间来看你胡言乱语的人少之又少（我又在自己骂自己了），这也是我将我的个人博客定义为“开放且无人翻看的日记本”的一部分原因。如果你依然坚持那么往下看：</p>
+<span id="more"></span>
+
+<blockquote>
+<p><strong>Warning</strong></p>
+<p>本人技术小白一只，专业不是计算机，以下全部只针对于基于Hexo的静态博客，并且这也不是一篇技术类文章，不过如果你是第一次接触个人博客的话，或许对你有所帮助。</p>
+</blockquote>
+<h4 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h4><p>我也忘了当初是因为什么来建博客的了，一般来说，我们日常生活中是很少能接触到个人博客这种东西的。不过最后我还是弄了出来，现在想来属实是一段神奇的经历。</p>
+<p>即便对着教程，看着视频来按部就班地来也会出现一些意料之外的问题，对我这种没有任何相关知识储备的人来说会造成极大影响，这也是为什么我第一次尝试时以失败告终。不过在那之后一段时间比较清闲的时候我再一次挑战建立博客，而这次成功了。</p>
+<h4 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h4><p>第一次的成功多半在于主题的选择，在尝试了一些主题后无意间发现的<a class="link"   href="https://github.com/fluid-dev/hexo-theme-fluid" >Fluid<i class="fas fa-external-link-alt"></i></a>主题提供了非常完善的中文使用说明和问题解答，帮我解决了不少问题，有了之前的经历也才有了最近更换主题的快速成功。</p>
+<p>既然建好了就要考虑拿来做什么了，其实在第一次开放之前我就写了几篇文章了，只是后来偷偷删掉了，再然后嘛就是比较正常的写文章、大概每个月会写一篇吧，主要还是看我心情和空闲时间是否充足，大概就是记录生活啥的（顺便一句题外话，我准备考科目二的时候考试在之前两天取消了，因为疫情，F**k。）。其实后来慢慢的我发现博客这东西挺合我胃口的，鄙人不善于言辞，就平时朋友圈、QQ动态从不发东西，而个人博客提供了一个很好的平台，可以让我不加遮掩地输出我的一些思考和想法。</p>
+<p>虽然说这完全不是技术、教程类文章，但我还是想总结一下建立博客的总体思路：</p>
+<blockquote>
+<p><strong>Progress</strong></p>
+<p>↳做好准备工作、可以去找视频教程根据说明准备好需要的软件条件</p>
+<p>↳确定建立的平台、基于<a class="link"   href="https://gitee.com/" >Gitee<i class="fas fa-external-link-alt"></i></a>还是<a class="link"   href="https://github.com/" >Github<i class="fas fa-external-link-alt"></i></a>（在国内不太稳定）或是其他我就不知道了</p>
+<p>↳开始建立过程，建议找个图文教程参考一下，最好是时间比较近的</p>
+<p>↳个性化你的博客，这个完全取决于自己，一般是使用<a class="link"   href="https://hexo.io/themes/" >主题<i class="fas fa-external-link-alt"></i></a>配合一些<a class="link"   href="https://hexo.io/plugins/" >插件<i class="fas fa-external-link-alt"></i></a></p>
+<p>↳最后，写博客，可能需要用到一些语法，不过你最好知道自己要写什么</p>
+</blockquote>
+<h4 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h4><h5 id="对于Hexo博客的认知："><a href="#对于Hexo博客的认知：" class="headerlink" title="对于Hexo博客的认知："></a>对于Hexo博客的认知：</h5><ul>
+<li>优势：部署方便、流程简单、对技术要求不高</li>
+<li>缺陷：不能动态更新，所以有时候需要刷新才能看到新内容</li>
+</ul>
+<h5 id="对于博客流量的看法："><a href="#对于博客流量的看法：" class="headerlink" title="对于博客流量的看法："></a>对于博客流量的看法：</h5><ul>
+<li>我之前其实尝试过做一些宣传的，不过意义并不大，现在对此就非常的佛系了</li>
+</ul>
+<h5 id="对于今后的一些想法："><a href="#对于今后的一些想法：" class="headerlink" title="对于今后的一些想法："></a>对于今后的一些想法：</h5><ul>
+<li>现在此博客对我来说更像是我的个人空间，一个避风港，表达出我想要的东西，我认为这就足够了，今后会尽量坚持下去的。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>经验之谈</category>
+      </categories>
+      <tags>
+        <tag>小结</tag>
+        <tag>闲谈</tag>
       </tags>
   </entry>
   <entry>
@@ -387,37 +387,8 @@
         <category>经验之谈</category>
       </categories>
       <tags>
-        <tag>MC</tag>
         <tag>闲谈</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>-最近在干吗？-每日摸鱼(1/∞)。</title>
-    <url>/wenewenew/2021/05/19/suiyizhitan01/</url>
-    <content><![CDATA[<p>时间真快啊，特喵的五月就快结束了！</p>
-<p>哈哈，我没有eat salt，我说过会把这个博客坚持下去，<del>至少五月的文章水出来了</del>。最近有点水，上课划水严重，但是也做了些有趣的事，也不是很闲吧（重新定义什么算闲doge）。桥豆麻袋，让我先回忆一下最近做了啥。嗯…啊…额…，想不起来了，那么就写到这里，有缘再见（手动划掉）。</p>
-<h3 id="洞洞腰"><a href="#洞洞腰" class="headerlink" title="洞洞腰"></a>洞洞腰</h3><p>任务：第一篇文章不是那个杂乱无章的任务吗，我都完成了啥子嘞，《黑暗森林》已经读完（自豪），第三部打算无限咕咕咕下去（其实是要准备各种考试了，下周开始还要实训，啊，我的四级，真的能过吗？）；然后，单词，其实之前还在坚持去背的，最近就……，前段时间做了个模拟卷，很明显重点应该放在听力上，多练练，然后背一下核心单词，嗯，暂时这样。</p>
-<span id="more"></span>
-
-<h3 id="No-吐"><a href="#No-吐" class="headerlink" title="No.吐"></a>No.吐</h3><p>前段时间翻MC百科比较多，好吧，了解了很多Mod，但是大多都不怎么会玩，然后脑子再次一热（这不怪我）准备做一个MC的整合包，然后发现实力不够，不过还是草草完成了一个最初版（已更新，现在这里是0.3.1正式版，也是最终版了，不过历史版本也留了。）<a class="link"   href="https://pan.baidu.com/s/1OHwHTgx2y_eL_NPJ8vx4wQ" >留个链接<i class="fas fa-external-link-alt"></i></a>，（神秘代码：y3d8）。<del>还是费了很大心思的，不过效果并不好，主要是不舍得删模组吧，最后有点卡卡的感觉 [你好逊哦，经过我一番修整后，0.2.4已经非常稳定了！]自此，计划暂时搁置下去，呜呜呜（太弱小了，没有力量！）</del></p>
-<p><img src="https://ae01.alicdn.com/kf/Uf42f1cfc0e1244649a66f5d5db6adb8aC.jpg" alt="启动器主视图-早期测试版"></p>
-<h3 id="弟山条"><a href="#弟山条" class="headerlink" title="弟山条"></a>弟山条</h3><p>其实前段主要的空闲时间都在看番喽，游戏也有一点，不过我现在玩游戏真的很少（魔幻的世界啊），看番是个费时间的东西，主要是我一般不会倍速，我看番纯粹是为了放松（-那熬夜来看也是放松吗doge? -那只是偶尔有点入迷了，真的！）</p>
-<p>然后，最近有在认真学习的，一直在看高数（其实也挺简单的，至少看起来是这样），至少不要补考吧，加油加油！未来依然可期！</p>
-<h3 id="琐事条"><a href="#琐事条" class="headerlink" title="琐事条"></a>琐事条</h3><p><strong>自问自答系列：（Q：question；R：reply）</strong></p>
-<p><strong>Q</strong>：写博客的目的是什么？</p>
-<p><strong>R</strong>：主要是想留个纪念，追求一种满足感？，不过对我总结和逻辑还是有很大帮助的，因为你要思考，要有个具体的框架，要去思考写啥，建博客对我更是一个挑战。</p>
-<p><strong>Q</strong>：为什么文章里这么多括号吐槽？</p>
-<p><strong>R</strong>：<del>让你们感受下人格分裂</del>，主要是一种风格吧，记得是从《肖申克的救赎》这本书里一个小章（并不是肖申克的救赎那篇）里有这种写法，当时觉得挺有意思，便逐渐运用起来了，希望你们能接受。（哈哈，你真的以为有人会来看吗？doge）</p>
-<p><strong>Q</strong>：有目标吗？</p>
-<p><strong>R</strong>：当然……..莫了，尽力去做好眼前的事呗，然后尽量多去学点技术，丰富自己。</p>
-<p><strong>Q&amp;R</strong>：嗯嗯嗯，差不多了，我就不再表演了（真的！），下次有缘再见了，拜咪~！</p>
-]]></content>
-      <categories>
-        <category>大学生活</category>
-      </categories>
-      <tags>
-        <tag>小结</tag>
-        <tag>扯淡</tag>
+        <tag>MC</tag>
       </tags>
   </entry>
   <entry>
@@ -594,6 +565,35 @@
       <tags>
         <tag>小结</tag>
         <tag>番剧</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>-最近在干吗？-每日摸鱼(1/∞)。</title>
+    <url>/wenewenew/2021/05/19/suiyizhitan01/</url>
+    <content><![CDATA[<p>时间真快啊，特喵的五月就快结束了！</p>
+<p>哈哈，我没有eat salt，我说过会把这个博客坚持下去，<del>至少五月的文章水出来了</del>。最近有点水，上课划水严重，但是也做了些有趣的事，也不是很闲吧（重新定义什么算闲doge）。桥豆麻袋，让我先回忆一下最近做了啥。嗯…啊…额…，想不起来了，那么就写到这里，有缘再见（手动划掉）。</p>
+<h3 id="洞洞腰"><a href="#洞洞腰" class="headerlink" title="洞洞腰"></a>洞洞腰</h3><p>任务：第一篇文章不是那个杂乱无章的任务吗，我都完成了啥子嘞，《黑暗森林》已经读完（自豪），第三部打算无限咕咕咕下去（其实是要准备各种考试了，下周开始还要实训，啊，我的四级，真的能过吗？）；然后，单词，其实之前还在坚持去背的，最近就……，前段时间做了个模拟卷，很明显重点应该放在听力上，多练练，然后背一下核心单词，嗯，暂时这样。</p>
+<span id="more"></span>
+
+<h3 id="No-吐"><a href="#No-吐" class="headerlink" title="No.吐"></a>No.吐</h3><p>前段时间翻MC百科比较多，好吧，了解了很多Mod，但是大多都不怎么会玩，然后脑子再次一热（这不怪我）准备做一个MC的整合包，然后发现实力不够，不过还是草草完成了一个最初版（已更新，现在这里是0.3.1正式版，也是最终版了，不过历史版本也留了。）<a class="link"   href="https://pan.baidu.com/s/1OHwHTgx2y_eL_NPJ8vx4wQ" >留个链接<i class="fas fa-external-link-alt"></i></a>，（神秘代码：y3d8）。<del>还是费了很大心思的，不过效果并不好，主要是不舍得删模组吧，最后有点卡卡的感觉 [你好逊哦，经过我一番修整后，0.2.4已经非常稳定了！]自此，计划暂时搁置下去，呜呜呜（太弱小了，没有力量！）</del></p>
+<p><img src="https://ae01.alicdn.com/kf/Uf42f1cfc0e1244649a66f5d5db6adb8aC.jpg" alt="启动器主视图-早期测试版"></p>
+<h3 id="弟山条"><a href="#弟山条" class="headerlink" title="弟山条"></a>弟山条</h3><p>其实前段主要的空闲时间都在看番喽，游戏也有一点，不过我现在玩游戏真的很少（魔幻的世界啊），看番是个费时间的东西，主要是我一般不会倍速，我看番纯粹是为了放松（-那熬夜来看也是放松吗doge? -那只是偶尔有点入迷了，真的！）</p>
+<p>然后，最近有在认真学习的，一直在看高数（其实也挺简单的，至少看起来是这样），至少不要补考吧，加油加油！未来依然可期！</p>
+<h3 id="琐事条"><a href="#琐事条" class="headerlink" title="琐事条"></a>琐事条</h3><p><strong>自问自答系列：（Q：question；R：reply）</strong></p>
+<p><strong>Q</strong>：写博客的目的是什么？</p>
+<p><strong>R</strong>：主要是想留个纪念，追求一种满足感？，不过对我总结和逻辑还是有很大帮助的，因为你要思考，要有个具体的框架，要去思考写啥，建博客对我更是一个挑战。</p>
+<p><strong>Q</strong>：为什么文章里这么多括号吐槽？</p>
+<p><strong>R</strong>：<del>让你们感受下人格分裂</del>，主要是一种风格吧，记得是从《肖申克的救赎》这本书里一个小章（并不是肖申克的救赎那篇）里有这种写法，当时觉得挺有意思，便逐渐运用起来了，希望你们能接受。（哈哈，你真的以为有人会来看吗？doge）</p>
+<p><strong>Q</strong>：有目标吗？</p>
+<p><strong>R</strong>：当然……..莫了，尽力去做好眼前的事呗，然后尽量多去学点技术，丰富自己。</p>
+<p><strong>Q&amp;R</strong>：嗯嗯嗯，差不多了，我就不再表演了（真的！），下次有缘再见了，拜咪~！</p>
+]]></content>
+      <categories>
+        <category>大学生活</category>
+      </categories>
+      <tags>
+        <tag>小结</tag>
+        <tag>扯淡</tag>
       </tags>
   </entry>
 </search>
